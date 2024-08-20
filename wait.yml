@@ -1,3 +1,6 @@
-- name: Wait for job max 120s
-  tower_job_wait:
-    timeout: 120
+- name: Wait for 60 seconds using wait_for
+  hosts: all
+  tasks:
+    - name: Wait for 60 seconds
+      wait_for:
+        timeout: 60
